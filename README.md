@@ -15,7 +15,7 @@
     <a href="https://pkg.go.dev/github.com/opencinemac/occlib-go?readme=expanded#section-documentation"><img src="https://pkg.go.dev/badge/github.com/opencinemac/occlib-go?readme=expanded#section-documentation.svg" alt="Go Reference"></a>
 </p>
 
-Occlib is the Open Cinema Collecitve's Golang Library template.
+Occlib is the Open Cinema Collective's Golang Library template.
 
 Occlib comes pre-built with a number of tools for formatting, linting and 
 testing.
