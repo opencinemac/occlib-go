@@ -1,7 +1,7 @@
 <h1 align="center">occlib-go</h1>
 <p align="center">A Go library template</p>
 <p align="center">
-    <a href="https://dev.azure.com/peake100/Open%20Cinema%20Collective/_build?definitionId=16"><img src="https://dev.azure.com/peake100/Open%20Cinema%20Collective/_apis/build/status/occlib-go?branchName=main" alt="click to see build pipeline"></a>
+    <a href="https://dev.azure.com/peake100/Open%20Cinema%20Collective/_build?definitionId=16"><img src="https://dev.azure.com/peake100/Open%20Cinema%20Collective/_apis/build/status/occlib-go?branchName=dev" alt="click to see build pipeline"></a>
     <a href="https://dev.azure.com/peake100/Open%20Cinema%20Collective/_build?definitionId=16"><img src="https://img.shields.io/azure-devops/tests/peake100/Open%20Cinema%20Collective/16/dev?compact_message" alt="click to see build pipeline"></a>
     <a href="https://dev.azure.com/peake100/Open%20Cinema%20Collective/_build?definitionId=16"><img src="https://img.shields.io/azure-devops/coverage/peake100/Open%20Cinema%20Collective/16/dev?compact_message" alt="click to see build pipeline"></a>
 </p>
