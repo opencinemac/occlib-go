@@ -1,4 +1,4 @@
-package islelib
+package occlib
 
 import (
 	"github.com/stretchr/testify/assert"

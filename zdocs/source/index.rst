@@ -1,13 +1,13 @@
-Islelib-Go
-==========
+Occlib-Go
+=========
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-``islelib`` is Illuscio's python library template. To build your own documentation,
-simply start using it. Below we will show some example documentation with the basic
-functions of this library template.
+``occlib`` is The Open Cinema Collective's python library template. To build your own
+documentation, simply start using it. Below we will show some example documentation with
+the basic functions of this library template.
 
 Table of Contents
 =================
@@ -23,20 +23,19 @@ Table of Contents
 Basic Usage
 ===========
 
-   >>> import islelib
    [basic usage example goes here]
 
-Islelib comes with a number of pre-built quality-of-life macros for developers so they
+Occlib comes with a number of pre-built quality-of-life macros for developers so they
 can code more and manage less, most of which are accessed through ``make`` commands.
 
-In addition to your lib's package folder, islelib has two other main directories:
+In addition to your lib's package folder, occlib has two other main directories:
 
    * ``./zdocs`` - where docs are built to and stored
    * ``./zdevelop`` - where tests, maintenance scripts, and other information is stored
 
 .. note::
 
-    Islelib separates tests into their own zdevelop/tests directory. Because of the way
+    Occlib separates tests into their own zdevelop/tests directory. Because of the way
     go works, this only allows the importing of public APIs, so unit testing of private
     functions or method will still need to live alongside the regular files.
 
@@ -60,38 +59,37 @@ Setting up your Library
 
 Getting started is easy, just follow the below steps. Many of these steps include
 ``Make`` scripts that help you get up and running quickly. To run the ``Make`` commands,
-ensure that the active directory of your terminal session is ``"islelib-py"``
+ensure that the active directory of your terminal session is ``"occlib-py"``
 
-1. Clone islelib-go from Github
+1. Clone occlib-go from Github
 --------------------------------
 
 navigate to where you wish to keep your project in terminal: ::
 
    >>> cd /path/to/local_repository
-   >>> git clone git@github.com:bpeake-illuscio/islelib-go.git
+   >>> git clone https://github.com/opencinemac/occlib-go.git
 
 once the library is cloned, move into it as your active directory: ::
 
-    >>> cd islelib-go
+    >>> cd occlib-go
 
 2. Pick a Name
 --------------
 
-Illuscio uses the ''isle'' prefix convention (phonetically sounds like I-L/"Aye-EL" as
+The Open Cinema Collective's uses the ''isle'' prefix convention (phonetically sounds like I-L/"Aye-EL" as
 opposed to "ill". Examples include ``isle_type``, ``isle_collections``, etc.
 
 When you have chosen a name for your new lib, simply type: ::
 
    >>> make name n=libname
    library renamed! to switch your current directory, use the following	command:
-   cd '/path/to/libname-py'
+   cd '/path/to/libname-go'
 
 ... where ``libname`` is the name of your new library. This will:
 
    * change the name of any packages with an __init__ to ``libname`` (uses a find and replace from the old name when applicable).
    * change all of the relevant setup.cfg options to ``libname``
-   * change the top level folder to ``libname-py``
-   * remove old ``islelib.egg`` folder
+   * change the top level folder to ``libname-go``
 
 3. Pick a Description
 ---------------------
@@ -142,7 +140,7 @@ typing: ::
 5. Install the Dev Environment
 ------------------------------
 
-islelib already comes pre-built with all the options and tools needed to write a generic
+occlib already comes pre-built with all the options and tools needed to write a generic
 library. To install these tools into a python environment, type: ::
 
    >>> make install-dev
@@ -183,7 +181,7 @@ Writing Your Library
 1. Style
 --------
 
-Illuscio's style guide is simple and straightforward:
+The Open Cinema Collective's style guide is simple and straightforward:
 
    1. `Gofmt`_ first
    2. `Revive`_ second
@@ -216,7 +214,7 @@ be kept from deploying to production.
 ------------
 
 Strict pep8 and Black adherence, while useful in many ways to the organization, can be
-annoying and distracting to individual engineers. To help with this, the islelib
+annoying and distracting to individual engineers. To help with this, the occlib
 template comes with tools to re-format your code for you.
 
 To re-format your code, type: ::
@@ -246,7 +244,7 @@ browser once the tests complete:
    * results: ``zdevelop/tests/_reports/test_report.html``
    * coverage: ``zdevelop/tests/_reports/coverage/coverage.out``
 
-Illuscio requires >= 85% code coverage in all files to publish a library. Libraries
+The Open Cinema Collective's requires >= 85% code coverage in all files to publish a library. Libraries
 with less than 85% coverage in any given file will be kicked back or will need to have
 an exception granted.
 
@@ -261,9 +259,9 @@ The brief example tests in this library includes a failed test.
 5. Document
 -----------
 
-islelib uses a combination of `GoDoc`_ and `Sphinx`_ to create it's documentation which
+occlib uses a combination of `GoDoc`_ and `Sphinx`_ to create it's documentation which
 enables the creation of high-level docs / tutorials using (which godoc is not well
-uited for) .rst files and `Sphinx`_, which can then link to traditional API docs created
+suited for) .rst files and `Sphinx`_, which can then link to traditional API docs created
 using `GoDoc`_.
 
 High level documentation's entry point is: ::
@@ -322,7 +320,7 @@ will:
 4. Build:
 ---------
 
-islelib uses `Azure Pipelines`_ to automatically run builds.
+occlib uses `Azure Pipelines`_ to automatically run builds.
 
 For more information on azure builds, see the `azure build templates repo`_.
 
@@ -331,22 +329,7 @@ For more information on azure builds, see the `azure build templates repo`_.
 Other Quality of Life Development Functions
 ===========================================
 
-1. Clean Caches
----------------
-
-``make clean`` will clear the following files from your library:
-
-   * pytest cache
-   * mypy cache
-   * .coverage cache
-   * ./build directory
-   * ./dist directory
-   * all .pyc files in the active directory tree
-   * the ``build`` folder in ``./zdevelop/docs``
-   * the ``.idea`` folder generated by pycharm to reset pycharm's cache
-
-
-2. Scratch Folder
+1. Scratch Folder
 -----------------
 
 The folder ``zdevelop/scratch`` is included in .gitignore, so you can store scratch work
@@ -365,10 +348,10 @@ to do quick tests in this directory without accidentally causing a commit confli
 .. _Azure Pipelines: https://azure.microsoft.com/en-us/services/devops/pipelines/
 .. _PyPri: https://www.python-private-package-index.com/
 .. _Azure Artifacts: https://azure.microsoft.com/en-us/services/devops/artifacts/
-.. _Python Azure Artifacts Feed: https://dev.azure.com/illuscio/Python%20Packages/_packaging?_a=feed&feed=isle_pypi_libs
-.. _Pipeline dashboard:: https://dev.azure.com/illuscio/Python%20Packages/_build?definitionId=1
+.. _Python Azure Artifacts Feed: https://dev.azure.com/The Open Cinema Collective's/Python%20Packages/_packaging?_a=feed&feed=isle_pypi_libs
+.. _Pipeline dashboard:: https://dev.azure.com/The Open Cinema Collective's/Python%20Packages/_build?definitionId=1
 .. _twine: https://twine.readthedocs.io/en/latest/
 .. _Amazon S3: https://aws.amazon.com/s3/
 .. _Cloudfront: https://aws.amazon.com/cloudfront/
 .. _this lambda edge template: https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:520945424137:applications/cloudfront-authorization-at-edge
-.. _azure build templates repo: https://github.com/illuscio-dev/azure-pipelines-templates
+.. _azure build templates repo: https://github.com/The Open Cinema Collective's-dev/azure-pipelines-templates

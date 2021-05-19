@@ -1,4 +1,4 @@
-module islelib
+module github.com/opencinmac/occlib-go
 
 go 1.16
 
